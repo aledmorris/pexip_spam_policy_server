@@ -26,7 +26,7 @@ def spam_policy(request):
                 policy_response =                 {
                         "status" : "success",
                         "action" : "reject",
-                        "reason" : "Known bad user agent, Bang Bang!"
+                        "reason" : "Known bad user agent, " + user_agent + ", Bang Bang!"
                     }           
                 
             else:
