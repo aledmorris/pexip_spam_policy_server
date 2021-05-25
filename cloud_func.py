@@ -5,7 +5,7 @@ def spam_policy(request):
     External Policy script to block spam calls based on known bad user agent strings
     Written for Google Cloud Functions.
 
-    Only allows GET requests, will error if any toher methog is used.
+    Only allows GET requests, will error if any other methog is used.
 
     Pexip Policy documentation: https://docs.pexip.com/admin/integrate_policy.htm
 
