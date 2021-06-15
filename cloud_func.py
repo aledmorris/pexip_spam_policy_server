@@ -33,7 +33,7 @@ def spam_policy(request):
     suspect_vendor = ["cisco", "Cisco", "friendly-scanner", "sipcli", "sipvicious", "sip-scan", "sipsak", "sundayddr", "iWar", "CSipSimple", "SIVuS", "Gulp", "sipv",  "smap", "friendly-request", "VaxIPUserAgent", "VaxSIPUserAgent", "siparmyknife", "Test Agent", "PortSIP VoIP SDK 11.2", "ABTO Video SIP SDK", "Asterisk PBX", "PortSIP VoIP SDK", "eyeBeam release 3015c stamp 27107", "ciscovoipswichpbx", "ciscovoipswichpbx123", "SIPADMINPBXCISCOOO123", "SIPFPBXciscooo" ]
     
     # prefix of the the most popular known bad user agents
-    most_wanted = [ "portsip", "eyebeam", "ciscovoip", "sipadmin", "sipfpbx" ]
+    most_wanted = [ "portsip", "eyebeam", "ciscovoip", "sipadmin", "sipfpbx", "fpbx" ]
     
     if request.method == 'GET':
         
