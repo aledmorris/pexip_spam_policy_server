@@ -5,7 +5,7 @@ def spam_policy(request):
     External Policy script to block spam calls based on known bad user agent strings
     Written for Google Cloud Functions.
 
-    Only allows GET requests, will error if any other methog is used.
+    Only allows GET requests, will error if any toher methog is used.
 
     Pexip Policy documentation: https://docs.pexip.com/admin/integrate_policy.htm
 
@@ -33,8 +33,8 @@ def spam_policy(request):
     suspect_vendor = ["cisco", "Cisco", "friendly-scanner", "sipcli", "sipvicious", "sip-scan", "sipsak", "sundayddr", "iWar", "CSipSimple", "SIVuS", "Gulp", "sipv",  "smap", "friendly-request", "VaxIPUserAgent", "VaxSIPUserAgent", "siparmyknife", "Test Agent", "PortSIP VoIP SDK 11.2", "ABTO Video SIP SDK", "Asterisk PBX", "PortSIP VoIP SDK", "eyeBeam release 3015c stamp 27107", "ciscovoipswichpbx", "ciscovoipswichpbx123", "SIPADMINPBXCISCOOO123", "SIPFPBXciscooo" ]
     
     # prefix of the the most popular known bad user agents
-    most_wanted = [ "portsip", "eyebeam", "ciscovoip", "sipadmin", "sipfpbx", "fpbx" ]
-    
+    most_wanted = [ "portsip", "eyebeam", "ciscovoip", "sipadmin", "sipfpbx", "fpbx", "voippbx", "pbxcisco" ]
+
     if request.method == 'GET':
         
         match = False
