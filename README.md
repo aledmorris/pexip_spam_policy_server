@@ -7,6 +7,8 @@ Pexip Infinity External Policy reference documentation can be found here: https:
 
 - **app.py** = Flask app to demonstrate the concept in a general sense.
 
-- **cloud_func.py** = script to be used with Google Cloud Functions.
+- **cloud_func.py** = example script to be used with Google Cloud Functions.
+
+- **lambda_func.py** = example script for use with AWS Lambda
 
 
