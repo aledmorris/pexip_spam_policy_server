@@ -1,5 +1,9 @@
 import json, logging
 
+# Setup logging
+logz = logging.getLogger(__name__)
+logz.setLevel(logging.INFO)
+
 
 def lambda_handler(event, context):
     
@@ -34,7 +38,7 @@ def lambda_handler(event, context):
 
         #log the error
         print("Error Bad Request")
-        logging.warning('Bad request - call_direction field missing.')
+        logz.warning('Bad request - call_direction field missing.')
 
         # send 400
         return {
@@ -46,7 +50,7 @@ def lambda_handler(event, context):
         
         #log the error
         print("Error Bad Request")
-        logging.warning('Bad request - user_agent field missing.')
+        logz.warning('Bad request - user_agent field missing.')
 
         # send 400
         return {
@@ -71,7 +75,7 @@ def lambda_handler(event, context):
                 
                 #log the rejection
                 print("Blocked User Agent: " + user_agent)
-                logging.info('Blocked user agent: ' + user_agent)
+                logz.info('Blocked user agent: ' + user_agent)
 
                 match=True
 
@@ -86,7 +90,7 @@ def lambda_handler(event, context):
 
                 #log the rejection
                 print("Blocked User Agent: " + user_agent)
-                logging.info('Blocked user agent: ' + user_agent)  
+                logz.info('Blocked user agent: ' + user_agent)  
                 
             else:
                 # permit the call - not a known bad UA
